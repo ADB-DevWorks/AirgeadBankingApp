@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="AirgeadBankingApp/AirgeadBankingApp.vcxproj" />
+  <Project Path="AirgeadBankingApp/AirgeadBankingApp.vcxproj" Id="33d899fd-f040-44bb-ad43-3e479fe46ebe" />
 </Solution>

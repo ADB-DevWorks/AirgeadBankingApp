@@ -5,6 +5,7 @@
 class Account
 {
     public:
+        Account();
         void SetInitialInvestment(double t_initialInvestment);
         void SetMonthlyDeposit(double t_monthlyDeposit);
         void SetAnnualInterest(double t_annualInterest);
@@ -14,6 +15,8 @@ class Account
         double GetMonthlyDeposit() const;
         double GetAnnualInterest() const;
         int GetNumberYears() const;
+
+        bool IsDataCollected() const;
 
     private:
         double m_initialInvestment;

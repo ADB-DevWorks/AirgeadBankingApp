@@ -7,9 +7,8 @@ class MenuRenderer
 {
 
 public:
-	void OptionsMenu();
+	void OptionsMenu(const Account& account);
 
-    void AccountStatus(const Account& account);
 };
 
 #endif // !MENURENDERER_H
