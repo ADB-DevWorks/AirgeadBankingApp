@@ -1,11 +1,6 @@
 #include "Menu.h"
 #include <iostream>
 
-void Menu::SetMenuOption(int t_menuOption) {
-	m_menuOption = t_menuOption;
-}
-
-int Menu::GetMenuOption() const { return m_menuOption; }
 
 void Menu::UpdateAccount(Account& account) {
 	int menuOption;

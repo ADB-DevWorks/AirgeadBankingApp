@@ -36,7 +36,7 @@ void MenuRenderer::OptionsMenu(const Account& account) {
 		std::cout << " " << std::endl;
 	}
 	else {
-		std::cout << "$" << interest << std::endl;
+		std::cout << interest << "%" << std::endl;
 	}
 	std::cout << "4) Number of years to invest:";
 	if (years < 0) {
@@ -45,6 +45,7 @@ void MenuRenderer::OptionsMenu(const Account& account) {
 	else {
 		std::cout << " " << years << std::endl;
 	}
+		std::cout << std::endl;
 
 }
 

@@ -7,9 +7,6 @@
 class Menu
 {
 public:
-	void SetMenuOption(int t_menuOption);
-
-	int GetMenuOption() const;
 
 	void UpdateAccount(Account& account);
 

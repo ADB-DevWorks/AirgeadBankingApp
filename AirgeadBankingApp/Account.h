@@ -22,7 +22,7 @@ class Account
         double m_initialInvestment;
         double m_monthlyDeposit;
         double m_annualInterest;
-        double m_numberYears;
+        int m_numberYears;
 
 };
 
