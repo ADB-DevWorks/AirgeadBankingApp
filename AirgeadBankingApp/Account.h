@@ -5,12 +5,14 @@
 class Account
 {
     public:
-        Account();
+        Account(); // Constructor with no perameters
+        // Modifiers
         void SetInitialInvestment(double t_initialInvestment);
         void SetMonthlyDeposit(double t_monthlyDeposit);
         void SetAnnualInterest(double t_annualInterest);
         void SetNumberYears(int t_numberYears);
 
+        // Accessors
         double GetInitialInvestment() const;
         double GetMonthlyDeposit() const;
         double GetAnnualInterest() const;
@@ -18,6 +20,7 @@ class Account
 
         bool IsDataCollected() const;
 
+        // Members to hold account data
     private:
         double m_initialInvestment;
         double m_monthlyDeposit;

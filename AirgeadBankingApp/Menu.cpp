@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include <iostream>
 
+// Method handles the logic and user input to set the account members value
 
 void Menu::UpdateAccount(Account& account) {
 	int menuOption;
@@ -9,13 +10,14 @@ void Menu::UpdateAccount(Account& account) {
 	double interest;
 	int years;
 
-	std::cin >> menuOption;
+	std::cin >> menuOption; // Selects which field to modify
 	
+	// Validation for menu options range
 	if (menuOption < 1 || menuOption > 4) {
 		std::cout << "Invalid option" << std::endl;
 		return;
 	}
-	else {
+	else { // Matches input to menu option. Uses account modifiers to set the account
 	    if (menuOption == 1) {
 		    std::cout << "Enter your initial investment amount: ";
 		    std::cin >> investmentAmount;

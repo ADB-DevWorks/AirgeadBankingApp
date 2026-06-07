@@ -1,13 +1,15 @@
 #include "ReportRenderer.h"
 #include <string>
 #include <iostream>
-#include <iomanip>
+
+//These two functions handle formating and displaying the static reports
+
 
 void ReportRenderer::RenderWithoutDeposit(Account account, ReportGenerator report) {
 
-	std::cout << std::string(40, '*') << std::endl;
+	std::cout << std::string(50, '*') << std::endl;
 	std::cout << "Year  " << " Year End Balance" << "  Year End Earned Interest  \n";
-	std::cout << std::string(40, '_') << std::endl;
+	std::cout << std::string(50, '_') << std::endl;
 	report.GenerateNoDepositReport(account);
 	
 }

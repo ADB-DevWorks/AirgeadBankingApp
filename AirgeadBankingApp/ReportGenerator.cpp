@@ -2,9 +2,11 @@
 #include <iostream>
 #include <iomanip>
 
+// These methods contain the logic used in the static reports
+
 void ReportGenerator::GenerateNoDepositReport(const Account& account) {
 
-	char continueKey = ' ';
+	char continueKey = ' ';// Used to press key to continue
 
 	double balance = account.GetInitialInvestment();
 	double interestRate = account.GetAnnualInterest() / 100; // Changes percentage to decimal value
@@ -23,7 +25,7 @@ void ReportGenerator::GenerateNoDepositReport(const Account& account) {
 		std::cout << std::fixed << std::setprecision(2) << "     " << year << "       " << balance << "              " << yearlyInterest << " \n";
 
 	}
-
+	// Allows user to view report before continuning
 	std::cout << "***** Press Any Key To Continue *****";
 	std::cin >> continueKey;
 }
@@ -42,7 +44,7 @@ void ReportGenerator::GenerateReportWithDeposit(const Account& account) {
 
 		for (int month = 0; month < 12; month++) {
 			double monthlyInterest = (balance + monthlyDeposit) * (interestRate / 12); // Gets the interest earned or each month
-			balance += monthlyInterest + monthlyDeposit; // Updates balance with earned interest
+			balance += monthlyInterest + monthlyDeposit; // Updates balance with earned interest and monthly deposit
 			yearlyInterest += monthlyInterest; // Updates yearly interst earned every month
 
 		}

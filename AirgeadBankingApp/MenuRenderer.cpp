@@ -2,9 +2,11 @@
 #include <string>
 #include <iostream>
 
+// Method to diplay and format the menu. 
 
 void MenuRenderer::OptionsMenu(const Account& account) {
 
+	// Put thes account members into usable variables
 	double investment = account.GetInitialInvestment();
 	double deposit = account.GetMonthlyDeposit();
 	double interest = account.GetAnnualInterest();
@@ -19,7 +21,7 @@ void MenuRenderer::OptionsMenu(const Account& account) {
 	std::cout << std::endl;
 	std::cout << "1) Initial Investment: ";
 	if (investment < 0) {
-		std::cout << " " << std::endl;
+		std::cout << " " << std::endl; // Prints blank if amount is less than zero. Account members are initialy set to -1
 	}
 	else {
 		std::cout << "$" << investment << std::endl;

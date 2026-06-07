@@ -1,6 +1,6 @@
 #include "Account.h"
 
-Account::Account() {
+Account::Account() { // Constructor built with defaults set to -1. This is used for input validation and menu processing
 	m_initialInvestment = -1;
 	m_monthlyDeposit = -1;
 	m_annualInterest = -1;
@@ -28,6 +28,7 @@ double Account::GetMonthlyDeposit() const { return m_monthlyDeposit; }
 double Account::GetAnnualInterest() const { return m_annualInterest; }
 int Account::GetNumberYears() const { return m_numberYears; }
 
+// Checks if all members values have been updated
 bool Account::IsDataCollected() const {
 	if (m_initialInvestment != -1 && m_monthlyDeposit != -1 && m_annualInterest != -1 && m_numberYears != -1) {
 		return true;
