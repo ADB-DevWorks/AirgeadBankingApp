@@ -26,29 +26,40 @@ int main()
         menuRenderer.OptionsMenu(account);
         menu.UpdateAccount(account);
         if (account.IsDataCollected()) {
-            std::cout << "\n\nAre these amounts correct?\n1 for yes\/2 for no\n";
-            std::cin >> confirmation;
-            if (confirmation == 1) {
-                reportRenderer.RenderWithoutDeposit(account, reportGenerator);
-                reportRenderer.RenderWithDeposit(account, reportGenerator);
-                std::cout << "Would you like to run the program again?" << std::endl;
-                std::cout << "1) to continue /  2) to exit program\n";
+            while (true) {
+                menuRenderer.OptionsMenu(account);
+                std::cout << "\n\nAre these amounts correct?\n1) for yes | 2) for no\n";
                 std::cin >> confirmation;
-                if (confirmation == 1) {
+                if (confirmation != 1 && confirmation != 2) {
+                    std::cout << "Invalid Option\n";
                     continue;
                 }
-                else {
+                else if (confirmation == 1) {
+                    reportRenderer.RenderWithoutDeposit(account, reportGenerator);
+                    reportRenderer.RenderWithDeposit(account, reportGenerator);
                     break;
                 }
+                else {
+                    menuRenderer.OptionsMenu(account);
+                    menu.UpdateAccount(account);
+                    continue;
+                }
             }
-            else {
+            std::cout << "Would you like to run the program again?" << std::endl;
+            std::cout << "1) to continue |  2) to exit program\n";
+            std::cin >> confirmation;
+            if (confirmation == 1) {
                 continue;
             }
+            else {
+                break;
+            }
+        
         }
         
     }
     
-
+    return 0;
 }
 
 

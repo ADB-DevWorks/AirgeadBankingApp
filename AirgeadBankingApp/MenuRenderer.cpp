@@ -24,14 +24,14 @@ void MenuRenderer::OptionsMenu(const Account& account) {
 	else {
 		std::cout << "$" << investment << std::endl;
 	}
-	std::cout << "2) Monthly Depost: ";
+	std::cout << "2) Monthly Deposit: ";
 	if (deposit < 0) {
 		std::cout << " " << std::endl;
 	}
 	else {
 		std::cout << "$" << deposit << std::endl;
 	}
-	std::cout << "3) Annual Intrest Rate: ";
+	std::cout << "3) Annual Interest Rate: ";
 	if (interest < 0) {
 		std::cout << " " << std::endl;
 	}
