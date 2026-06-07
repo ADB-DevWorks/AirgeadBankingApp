@@ -131,14 +131,14 @@
     <ClCompile Include="AirgeadBankingApp.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MenuRenderer.cpp" />
-    <ClCompile Include="Report.cpp" />
+    <ClCompile Include="ReportGenerator.cpp" />
     <ClCompile Include="ReportRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MenuRenderer.h" />
-    <ClInclude Include="Report.h" />
+    <ClInclude Include="ReportGenerator.h" />
     <ClInclude Include="ReportRenderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
